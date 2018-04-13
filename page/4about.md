@@ -18,13 +18,13 @@ I am a software engineer living in the Bay Area.
 ## Contact me
 
 * GitHub：[AJKLILI](https://github.com/ajklili)
-* ustcandroid@gmail.com
+* [Email](mailto:ustcandroid@gmail.com)
 * [Instagram](https://www.instagram.com/ajklili/)
 
 
 ## About this site
 
-** This site is forked from Gaohaoyang's blog. If you also want this template, please visit [gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io) **
+**This site is forked from Haoyang Gao's blog. If you also want this template, please visit [gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
 
 ## Comments
