@@ -4,8 +4,8 @@ title:  "Hello World!"
 date:   2018-04-13
 categories:
 tags:
-excerpt: Initial Post
-mathjax: true
+excerpt: Something about this blog
+mathjax: false
 ---
 
 * content
