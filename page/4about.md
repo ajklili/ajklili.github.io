@@ -13,7 +13,7 @@ type: page
 
 <iframe src="https://githubbadge.appspot.com/ajklili?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
-I am a software engineer living in Bay Area.
+I am a software engineer living in the Bay Area.
 
 ## Contact me
 
@@ -24,7 +24,7 @@ I am a software engineer living in Bay Area.
 
 ## About this site
 
-** This site is forked from Gaohaoyang's blog. If you also want this template, please visit [gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
+** This site is forked from Gaohaoyang's blog. If you also want this template, please visit [gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io) **
 
 
 ## Comments
