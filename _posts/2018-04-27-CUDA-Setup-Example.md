@@ -1,15 +1,21 @@
 ---
 layout: post
 title:  "CUDA Setup Example"
-date:   2018-04-13
-categories:
-tags:
+date:   2018-04-27
+categories: tech
+tags: CUDA gcloud python
 excerpt: My script to setup CUDA on gcloud instances
 mathjax: false
 ---
 
 * content
 {:toc}
+
+
+## Instance
+
+Ubuntu-1704-x86_64 with NVIDIA® Tesla® K80 GPU
+> You may need to change the version number if you use different system and GPU type, or you want to install a different CUDA and cuDNN version.
 
 ## Script
 

@@ -2,8 +2,8 @@
 layout: post
 title:  "Hello World!"
 date:   2018-04-13
-categories:
-tags:
+categories: work
+tags: jekyll
 excerpt: Something about this blog
 mathjax: false
 ---

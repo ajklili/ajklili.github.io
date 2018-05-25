@@ -43,6 +43,17 @@ tag_dir: tag/
 # excerpt
 excerpt_separator: "\n\n\n\n"
 
+# encoding
+encoding: utf-8
+
 # paginate
 plugins: [jekyll-paginate]
 paginate: 6
+
+exclude:
+
+defaults:
+  - scope:
+      path: "images/posts_images"
+    values:
+      image: true
