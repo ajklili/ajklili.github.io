@@ -4,7 +4,7 @@ title:  "Cassandra: The Definition Guide (3)"
 date:   2018-05-20
 categories: tech
 tags: Cassandra NoSQL
-excerpt: Reading notes for Cassandra
+excerpt: "Reading notes for \"Cassandra: The Definition Guide\""
 mathjax: false
 ---
 
@@ -22,7 +22,7 @@ The topology of a cluster, and how nodes interact in a peer-to-peer design to ma
 
     Cassandra uses a gossip protocol that allows each node to keep track of state information about the other nodes in the cluster. The gossiper runs every second on a timer.
     The term “gossip protocol” was originally coined in 1987 by Alan Demers.
-    > `org.apache.cassandra.gms.Gossiper`
+    > org.apache.cassandra.gms.Gossiper
 
     Cassandra has robust support for failure detection, as specified by a popular algorithm for distributed computing called Phi Accrual Failure Detection implemented by [Hayashibara et al.](http://www.jaist.ac.jp/~defago/files/pdf/IS_RR_2004_010.pdf).
     Basically, Phi is calculated with:
@@ -30,18 +30,18 @@ The topology of a cluster, and how nodes interact in a peer-to-peer design to ma
     \phi = -log_{10}(1 - F(timeSinceLastHeartbeat))
     $$
     The failure monitoring system outputs a continuous level of “suspicion” regarding how confident it is that a node has failed, rather than a boolean status.
-    > `org.apache.cassandra.gms.​FailureDetector`
+    > org.apache.cassandra.gms.​FailureDetector
 
 * Hinted handoff
 
     Hinted handoff is used in Amazon’s Dynamo and is familiar to those who are aware of the concept of guaranteed delivery in messaging systems such as the Java Message Service (JMS).
-    > `org.apache.cassandra.db.HintedHandOffManager`
+    > org.apache.cassandra.db.HintedHandOffManager
 
 * Snitch
 
     The job of a snitch is to determine relative host proximity for each node in a cluster, which is used to determine which nodes to read and write from.
     The role of the snitch is to help identify the replica that will return the fastest, and this is the replica which is queried for the full data. There are several [different classes](http://cassandra.apache.org/doc/latest/operating/snitch.html).
-    > `org.apache.cassandra.locator`
+    > org.apache.cassandra.locator
 
     The “badness threshold” is a configurable parameter that determines how much worse a preferred node must perform than the best-performing node in order to lose its preferential status.
 
@@ -52,7 +52,7 @@ The topology of a cluster, and how nodes interact in a peer-to-peer design to ma
     Each physical node is then assigned multiple tokens. By default, each node will be assigned 256 of these tokens, meaning that it contains 256 virtual nodes. You can increase the number of vnodes by setting the num_tokens property in the `cassandra.yaml` file.
 
     A partitioner, then, is a hash function for computing the token of a partition key. Each row of data is distributed within the ring according to the value of the partition key token. The default partitioner is [Murmur3 Partitioner](https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/dht/Murmur3Partitioner.java).
-    > `org.apache.cassandra.dht package (DHT stands for “distributed hash table”)`
+    > org.apache.cassandra.dht package (DHT stands for “distributed hash table”)
 
     - Read
 
@@ -71,7 +71,7 @@ Architecture techniques Cassandra uses to support reading, writing, and deleting
 * Replica
 
     For determining replica placement, Cassandra implements the Gang of Four (the authors of the book "Design Patterns: Elements of Reusable Object-Oriented Software", Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides) Strategy pattern (the strategy pattern is used to create an interchangeable family of algorithms from which the required process is chosen at run-time.).
-    > `org.apache.cassandra.locator.AbstractReplicationStrategy`
+    > org.apache.cassandra.locator.AbstractReplicationStrategy
 
     - Replica synchronization is supported via two different modes known as read repair and anti-entropy repair. Anti-entropy (sometimes called manual repair) is a manually initiated operation performed with `nodetool` on nodes as part of a regular maintenance process. This protocols work by comparing replicas of data and reconciling differences observed between the replicas.
 
@@ -116,7 +116,7 @@ Cassandra’s design was influenced by Staged Event-Driven Architecture (SEDA). 
     > The durable_writes property allows you to bypass writing to the commit log for the keyspace. This value defaults to true, meaning that the commit log will be updated on modifications. Setting the value to false increases the speed of writes, but also has the risk of losing data if the node goes down before the data is flushed from memtables into SSTables.
 
 2. The memtable is a memory-resident data structure. Each memtable contains data for a specific table. Cassandra 2.1 have moved the majority of memtable data to native memory. The on-heap and off-heap size can be set in `cassandra.yaml`
-> `org.apache.cassandra.db.Memtable`
+> org.apache.cassandra.db.Memtable
 
 3. When the number of objects stored in the memtable reaches a threshold, the contents of the memtable are flushed to disk in a file called an SSTable. A new memtable is then created. This flushing is a non-blocking operation.
 
@@ -127,7 +127,7 @@ All writes are sequential, which is the primary reason that writes perform so we
     - Bloom filter
 
         Each SSTable also has an associated [Bloom filter](http://www.cnblogs.com/heaad/archive/2011/01/02/1924195.html). Bloom filters work by mapping the values in a data set into a bit array and condensing a larger data set into a digest string using a hash function. It acts as a cache since it may return false positive matches but never return false negative matches, this false positive chance is tuneable per table.
-        > `org.apache.cassandra.utils.BloomFilter`
+        > org.apache.cassandra.utils.BloomFilter
 
     - Tombstone - Delete
 
@@ -138,13 +138,13 @@ All writes are sequential, which is the primary reason that writes perform so we
 
         Compaction is the process of freeing up space by merging large accumulated datafiles.
         During compaction, the data in SSTables is merged: the keys are merged, columns are combined, tombstones are discarded, and a new index is created. On compaction, the merged data is sorted, a new index is created over the sorted data,
-        > `org.apache.cassandra.db.compaction.CompactionManager`
+        > org.apache.cassandra.db.compaction.CompactionManager
 
         Running nodetool repair causes Cassandra to execute a major compaction. During a major compaction, the server initiates a TreeRequest/TreeReponse conversation to exchange Merkle trees with neighboring nodes.
 
         > A Merkle tree, named for its inventor, Ralph Merkle, is also known as a “hash tree.” It’s a data structure represented as a binary tree, and it’s useful because it summarizes in short form the data in a larger data set. In a hash tree, the leaves are the data blocks (typically files on a filesystem) to be summarized. Every parent node in the tree is a hash of its direct child node, which tightly compacts the summary.
 
-        > `org.apache.cassandra.utils.MerkleTree`
+        > org.apache.cassandra.utils.MerkleTree
 
 5. Cache
 
@@ -195,17 +195,17 @@ All writes are sequential, which is the primary reason that writes perform so we
 
 | Class | Key feature |
 |---|---|
-| `org.apache.cassandra.service` | It includes the typical life cycle operations that you might expect: start, stop, activate, deactivate, and destroy. |
-| `org.apache.cassandra.service.EmbeddedCassandraService` | In-memory Cassandra instance for unit testing programs. |
-| `org.apache.cassandra.db` | The main entry point is the ColumnFamilyStore class, which manages all aspects of table storage, including commit logs, memtables, SSTables, and indexes. |
-| `org.apache.cassandra.streaming.​Stream​Manager` | Streaming is Cassandra’s optimized way of sending sections of SSTable files from one node to another via a persistent TCP connection |
-| `org.apache.cassandra.transport` | The CQL Native Protocol is the binary protocol used by clients to communicate with Cassandra |
-| `org.apache.cassandra.service.ActiveRepairService` | Repair |
-| `org.apache.cassandra.service.CachingService` | Caching |
-| `org.apache.cassandra.service.MigrationManager` | Migration |
-| `org.apache.cassandra.db.view.MaterializedViewManager` | Materialized views |
-| `org.apache.cassandra.db.index.SecondaryIndexManager` | Secondary indexes |
-| `org.apache.cassandra.auth.CassandraRoleManager` | Authorization |
+| org.apache.cassandra.service | It includes the typical life cycle operations that you might expect: start, stop, activate, deactivate, and destroy. |
+| org.apache.cassandra.service.EmbeddedCassandraService | In-memory Cassandra instance for unit testing programs. |
+| org.apache.cassandra.db | The main entry point is the ColumnFamilyStore class, which manages all aspects of table storage, including commit logs, memtables, SSTables, and indexes. |
+| org.apache.cassandra.streaming.​Stream​Manager | Streaming is Cassandra’s optimized way of sending sections of SSTable files from one node to another via a persistent TCP connection |
+| org.apache.cassandra.transport | The CQL Native Protocol is the binary protocol used by clients to communicate with Cassandra |
+| org.apache.cassandra.service.ActiveRepairService | Repair |
+| org.apache.cassandra.service.CachingService | Caching |
+| org.apache.cassandra.service.MigrationManager | Migration |
+| org.apache.cassandra.db.view.MaterializedViewManager | Materialized views |
+| org.apache.cassandra.db.index.SecondaryIndexManager | Secondary indexes |
+| org.apache.cassandra.auth.CassandraRoleManager | Authorization |
 
 
 

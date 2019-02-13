@@ -4,7 +4,7 @@ title:  "Cassandra: The Definition Guide (2)"
 date:   2018-05-01
 categories: tech
 tags: Cassandra NoSQL
-excerpt: Reading notes for Cassandra
+excerpt: "Reading notes for \"Cassandra: The Definition Guide\""
 mathjax: true
 ---
 
@@ -93,7 +93,7 @@ SASI (SSTable attached secondary indexes) can be created on a non-collection col
     7. list, [], support add operator(+)
     8. map
     9. user-defined types-structure
-    > `CREATE TYPE address(namex typex, namey typey);`
+    > CREATE TYPE address(namex typex, namey typey);
     10. (the ability to access individual attributes of a nested collection is not yet supported, because the nested collection is serialized as a single object by the implementation)
 
 * Queue

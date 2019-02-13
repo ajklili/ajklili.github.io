@@ -3,6 +3,7 @@ layout: post
 title:  "Think in Java -- OOP"
 categories: Java
 tags:  Java OOP
+excerpt: "Reading notes for \"Think in Java\""
 ---
 
 * content
