@@ -177,6 +177,9 @@ All writes are sequential, which is the primary reason that writes perform so we
 
         <img src="/images/posts_images/Cassandra/ctdg_0904.png" alt="Cassandra Node" style="width: 800px;"/>
 
+        Detailed path from [Michael Edge](https://wiki.apache.org/cassandra/ReadPathForUsers)
+        <img src="/images/posts_images/Cassandra/CassandraReadPath.png" alt="Cassandra Read" style="width: 1000px;"/>
+
 * Write
 
     - Path
@@ -184,7 +187,7 @@ All writes are sequential, which is the primary reason that writes perform so we
         <img src="/images/posts_images/Cassandra/ctdg_0902.png" alt="Cassandra Node" style="width: 800px;"/>
 
         Detailed path from [Michael Edge](https://wiki.apache.org/cassandra/WritePathForUsers)
-        <img src="/images/posts_images/Cassandra/CassandraWritePath.png" alt="Cassandra Node" style="width: 1000px;"/>
+        <img src="/images/posts_images/Cassandra/CassandraWritePath.png" alt="Cassandra Write" style="width: 1000px;"/>
 
     - Batch
 

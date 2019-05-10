@@ -10,3 +10,6 @@ tags:  Java OOP
 
 
 
+In any relationship it’s important to have boundaries that are respected by all parties involved.
+162 Thinking in Java Bruce Eckel
+ 
