@@ -11,7 +11,7 @@ tags:  work efficiency
 
 ## My daily routine
 1. Check emails
-2. Check Slack
+2. Check Slack messages
 3. Check today's meeting schedule
 4. Check JIRA tickets
 5. Check job status
