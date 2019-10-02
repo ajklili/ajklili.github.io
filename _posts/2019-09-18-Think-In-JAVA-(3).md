@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Think in Java -- Multithreading"
+title:  "Think in Java"
 categories: Java
 tags:  Java
 excerpt: "Some interesting words from \"Think in Java\" "
