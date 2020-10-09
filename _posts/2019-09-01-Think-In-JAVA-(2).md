@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Think in Java -- Multithreading"
-categories: Java
+categories: tech
 tags:  Java multithread
 excerpt: "Reading notes for \"Think in Java\" multithreading part"
 ---

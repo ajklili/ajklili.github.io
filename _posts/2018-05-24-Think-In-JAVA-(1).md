@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Think in Java -- OOP"
-categories: Java
+categories: tech
 tags:  Java OOP
 excerpt: "Reading notes for \"Think in Java\""
 ---

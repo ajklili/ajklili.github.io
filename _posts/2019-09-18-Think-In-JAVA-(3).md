@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Think in Java"
-categories: Java
+categories: tech
 tags:  Java
 excerpt: "Some interesting words from \"Think in Java\" "
 ---
