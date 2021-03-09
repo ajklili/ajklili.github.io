@@ -3,6 +3,7 @@ layout: post
 title:  "Design Data-Intensive Applications"
 categories: cloud
 tags: big-data design
+excerpt: "Reading notes for the book talking about what aspects to think from during data-intensive application design"
 ---
 
 * content

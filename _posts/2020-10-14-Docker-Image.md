@@ -3,6 +3,7 @@ layout: post
 title:  "Docker Image"
 categories: cloud
 tags: docker container
+excerpt: "Docker image related information"
 ---
 
 * content

@@ -3,6 +3,7 @@ layout: post
 title:  "Head First Design Patterns"
 categories: Software
 tags: design
+excerpt: "Basic object-oriented programming design patterns"
 ---
 
 * content
@@ -10,7 +11,7 @@ tags: design
 
 ## Head First
 
-### Learning principles:
+### Learning principles
 
 Material:
 
