@@ -55,20 +55,33 @@ Scratch is not a real image; it only contains the root filesystem structure and 
 
 ## Dockerfile Keywords
 
-FROM: base image
-ARG: building argument
-LABEL: add meta-info key-value pairs
-ENV: set environment variables for next steps
-WORKDIR: set directory for next steps
-RUN: execute commands in a new layer (one layer for one RUN)
-COPY: copy new files from building context to container filesystem
-ADD: COPY supporting URLs and TAR packages
-USER: specify the group:user
-VOLUME: create a mount point to bypass the CoW system
-EXPOSE: listening ports inside the container's network
-CMD: define the default process when executing the container
-ENTRYPOINT: set which command container will run as an executable
-HEALTHCHECK: run inside the container to verify the health of the process or processes
+`FROM`: base image
+
+`ARG`: building argument
+
+`LABEL`: add meta-info key-value pairs
+
+`ENV:`set environment variables for next steps
+
+`WORKDIR:`set directory for next steps
+
+`RUN:`execute commands in a new layer (one layer for one RUN)
+
+`COPY:`copy new files from building context to container filesystem
+
+`ADD:`COPY supporting URLs and TAR packages
+
+`USER:`specify the group:user
+
+`VOLUME:`create a mount point to bypass the CoW system
+
+`EXPOSE:`listening ports inside the container's network
+
+`CMD:`define the default process when executing the container
+
+`ENTRYPOINT:`set which command container will run as an executable
+
+`HEALTHCHECK:`run inside the container to verify the health of the process or processes
 
 ## Docker image commands
 
@@ -86,7 +99,7 @@ To create new images: `build`. Using the build action, we will be able to create
 Docker Registry is an open source solution and can be configured using the `/etc/docker/registry/config.yml` configuration file to change storage backends, ports, and other advanced settings.
 
 Images will be stored locally using the settings defined at the Docker daemon level. To use remote registries, we will set up different storage backends.
-We can download images manually using docker image pull <IMAGE:TAG>. This will download all image layers and we will be ready to launch a new container based on this image.
+We can download images manually using docker image pull `<IMAGE:TAG>`. This will download all image layers and we will be ready to launch a new container based on this image.
 Images are always required to execute a container. Therefore, each time we run a new container, the image will be downloaded from a registry if it is not present on the Docker host.
 
 Consequently, we will use Docker push to upload images to registries. But remember to use the full name, including the registry's fully qualified domain name and port (if we are not using docker.io and the default 443 port)

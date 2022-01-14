@@ -417,7 +417,7 @@ Patterns:
 
 MVC has been adapted to the web. There are many web MVC frameworks with various adaptations of the MVC pattern to fit the client/server application structure.
 
-## Guide
+## Guidance on Patterns
 
 ➜ *A **Pattern** is a solution to a problem in a context.* The context
 
