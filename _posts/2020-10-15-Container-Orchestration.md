@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Container Orchestration"
-categories: cloud
-tags: docker container
+categories: technology
+tags: docker container cloud
 ---
 
 * content

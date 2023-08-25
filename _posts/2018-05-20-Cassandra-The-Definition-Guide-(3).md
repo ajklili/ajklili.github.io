@@ -2,7 +2,7 @@
 layout: post
 title:  "Cassandra: The Definition Guide (3)"
 date:   2018-05-20
-categories: tech
+categories: technology
 tags: Cassandra NoSQL
 excerpt: "Reading notes for \"Cassandra: The Definition Guide\""
 mathjax: false

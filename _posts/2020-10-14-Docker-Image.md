@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Docker Image"
-categories: cloud
-tags: docker container
+categories: technology
+tags: docker container cloud
 excerpt: "Docker image related information"
 ---
 

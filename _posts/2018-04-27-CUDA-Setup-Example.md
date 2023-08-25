@@ -2,7 +2,7 @@
 layout: post
 title:  "CUDA Setup Example"
 date:   2018-04-27
-categories: tech
+categories: technology
 tags: CUDA gcloud python
 excerpt: My script to setup CUDA on gcloud instances
 mathjax: false

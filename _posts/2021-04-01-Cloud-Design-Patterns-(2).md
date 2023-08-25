@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Cloud Design - Data Management patterns"
-categories: Software
-tags: design
+title:  "Cloud Design - Data Management Patterns (2)"
+categories: technology
+tags: design patterns
 excerpt: "These design patterns are useful for building reliable	 scalable	 secure applications in the cloud."
 ---
 

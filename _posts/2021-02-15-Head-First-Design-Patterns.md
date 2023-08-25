@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Head First Design Patterns"
-categories: Software
-tags: design
+categories: technology
+tags: design patterns
 excerpt: "Basic object-oriented programming design patterns"
 ---
 

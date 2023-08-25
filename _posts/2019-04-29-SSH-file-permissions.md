@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SSH File Permissions"
-categories: tech
+categories: technology
 tags:  Linux SSH
 excerpt: "If you cannot ssh localhost, check the permission of the files"
 ---
